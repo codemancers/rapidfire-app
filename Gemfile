@@ -11,3 +11,4 @@ end
 
 gem 'jquery-rails'
 gem 'rapidfire', git: "git://github.com/code-mancers/rapidfire.git"
+gem 'devise'
