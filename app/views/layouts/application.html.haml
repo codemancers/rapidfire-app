@@ -7,9 +7,17 @@
     = csrf_meta_tags
 
   %body
+    = render partial: "shared/github_ribbon"
     = render partial: "shared/header"
 
     .container
       .row-fluid
         .span12
           = yield
+
+    %br
+    %br
+    %br
+    %br
+    %br
+    = render partial: "shared/footer"
