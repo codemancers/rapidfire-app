@@ -1,12 +1,14 @@
 %h2
   Question Groups
   - if can_administer?
-    = link_to "New Group", new_question_group_path
+    .pull-right
+      = link_to "New Group", new_question_group_path, class: "btn btn-primary btn-large"
+%hr
 
-%table
+%table.table.table-striped
   %colgroup
     %col
-    %col{ width: "250" }
+    %col{ width: "40%" }
   %thead
     %tr
       %th Question Group

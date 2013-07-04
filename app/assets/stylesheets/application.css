@@ -11,3 +11,13 @@
  *= require_self
  *= require flat-ui-overrides
  */
+
+.horizontal-list {
+  list-style: none;
+}
+
+.horizontal-list > li {
+  float: left;
+  display: inline;
+  margin: 0px 5px;
+}
