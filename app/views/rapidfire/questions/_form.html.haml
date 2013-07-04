@@ -1,25 +1,29 @@
 %h3 Question
 
 = simple_form_for [@question_group, question] do |f|
-  #question_type_wrapper
-    = f.input :type, collection: Rapidfire::QuestionProxy::QUESTION_TYPES, include_blank: false
-  #question_text_wrapper
-    = f.input :question_text
-  #question_answer_options_wrapper
-    = f.input :answer_options, as: :text, input_html: { rows: 5 }
+  .row-fluid
+    .span5
+      = f.input :type, collection: Rapidfire::QuestionProxy::QUESTION_TYPES,
+        include_blank: false, input_html: { class: "input-xlarge" }
+      = f.input :question_text, input_html: { class: "input-xlarge" }
+      = f.input :answer_options, as: :text, input_html: { rows: 4, class: "input-xlarge" }
 
-  %h4 Other options
+    .span6
+      %h4
+        %strong Other Optional Fields
+      %hr
+
+      = f.input :answer_presence, as: :boolean
+      .row-fluid
+        .span6
+          = f.input :answer_minimum_length
+        .span6
+          = f.input :answer_maximum_length
+      .row-fluid
+        .span6
+          = f.input :answer_greater_than_or_equal_to
+        .span6
+          = f.input :answer_less_than_or_equal_to
+
   %hr
-
-  #answer_presence_wrapper
-    = f.input :answer_presence, as: :boolean
-  #question_answer_minimum_length_wrapper
-    = f.input :answer_minimum_length
-  #question_answer_maximum_length_wrapper
-    = f.input :answer_maximum_length
-  #question_answer_greater_than_or_equal_to_wrapper
-    = f.input :answer_greater_than_or_equal_to
-  #question_answer_less_than_or_equal_to_wrapper
-    = f.input :answer_less_than_or_equal_to
-
   = f.submit "Save", class: "btn btn-primary btn-large"
