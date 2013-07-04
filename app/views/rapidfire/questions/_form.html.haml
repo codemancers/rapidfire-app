@@ -1,0 +1,30 @@
+%h3 Question
+
+= simple_form_for [@question_group, question] do |f|
+  - unless question.errors.empty?
+    %ul
+      - question.errors.full_messages.each do |message|
+        %li= message
+
+  #question_type_wrapper
+    = f.input :type, collection: Rapidfire::QuestionProxy::QUESTION_TYPES, include_blank: false
+  #question_text_wrapper
+    = f.input :question_text
+  #question_answer_options_wrapper
+    = f.input :answer_options, as: :text, input_html: { rows: 5 }
+
+  %h4 Other options
+  %hr
+
+  #answer_presence_wrapper
+    = f.input :answer_presence, as: :boolean
+  #question_answer_minimum_length_wrapper
+    = f.input :answer_minimum_length
+  #question_answer_maximum_length_wrapper
+    = f.input :answer_maximum_length
+  #question_answer_greater_than_or_equal_to_wrapper
+    = f.input :answer_greater_than_or_equal_to
+  #question_answer_less_than_or_equal_to_wrapper
+    = f.input :answer_less_than_or_equal_to
+
+  = f.submit

@@ -1,0 +1,15 @@
+%h2
+  Question Groups
+  - if can_administer?
+    = link_to "New Group", new_question_group_path
+
+%table
+  %colgroup
+    %col
+    %col{ width: "250" }
+  %thead
+    %tr
+      %th Question Group
+      %th
+  %tbody
+    = render partial: "question_group", collection: @question_groups

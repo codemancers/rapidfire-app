@@ -1,0 +1,4 @@
+= render partial: "rapidfire/answers/errors", locals: {answer: answer}
+
+= f.text_area :answer_text, as: :text, label: answer.question.question_text,
+  input_html: { rows: 5 }

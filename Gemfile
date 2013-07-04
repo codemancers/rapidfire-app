@@ -9,9 +9,11 @@ group :assets do
   gem 'uglifier',     '>= 1.0.3'
 end
 
+gem 'haml-rails'
 gem 'jquery-rails'
 gem 'rapidfire', git: "git://github.com/code-mancers/rapidfire.git"
 gem 'devise'
+gem 'simple_form'
 
 group :development do
   gem 'quiet_assets'

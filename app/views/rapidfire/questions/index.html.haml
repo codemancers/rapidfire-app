@@ -1,0 +1,15 @@
+%h2
+  Questions
+  = link_to "New Question", new_question_group_question_path(@question_group)
+%hr
+
+%table
+  %colgroup
+    %col
+    %col{ width: "250" }
+  %thead
+    %tr
+      %th Question
+      %th
+  %tbody
+    = render partial: "question", collection: @questions
