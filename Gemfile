@@ -12,3 +12,7 @@ end
 gem 'jquery-rails'
 gem 'rapidfire', git: "git://github.com/code-mancers/rapidfire.git"
 gem 'devise'
+
+group :development do
+  gem 'quiet_assets'
+end
