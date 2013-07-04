@@ -14,6 +14,7 @@ gem 'jquery-rails'
 gem 'rapidfire', git: "git://github.com/code-mancers/rapidfire.git"
 gem 'devise'
 gem 'simple_form'
+gem 'flatui-rails'
 
 group :development do
   gem 'quiet_assets'

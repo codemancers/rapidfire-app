@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/code-mancers/rapidfire.git
-  revision: 2780dc2a4dbb93f83f79a47cfc19a3e7e36e1f0d
+  revision: efce07008d73c50244cce20156f8cf47c6c0257a
   specs:
     rapidfire (1.0.0)
       rails (>= 3.0, < 4.0.0)
@@ -37,6 +37,8 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
+    bootstrap-sass (2.2.2.0)
+      sass (~> 3.2)
     builder (3.0.4)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -53,6 +55,10 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    flatui-rails (0.0.4)
+      bootstrap-sass (= 2.2.2)
+      railties (>= 3.1)
+      sass-rails (>= 3.2.0)
     haml (4.0.3)
       tilt
     haml-rails (0.4)
@@ -133,6 +139,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
+  flatui-rails
   haml-rails
   jquery-rails
   quiet_assets
