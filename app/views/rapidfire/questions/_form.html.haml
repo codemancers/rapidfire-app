@@ -1,11 +1,6 @@
 %h3 Question
 
 = simple_form_for [@question_group, question] do |f|
-  - unless question.errors.empty?
-    %ul
-      - question.errors.full_messages.each do |message|
-        %li= message
-
   #question_type_wrapper
     = f.input :type, collection: Rapidfire::QuestionProxy::QUESTION_TYPES, include_blank: false
   #question_text_wrapper
@@ -27,4 +22,4 @@
   #question_answer_less_than_or_equal_to_wrapper
     = f.input :answer_less_than_or_equal_to
 
-  = f.submit
+  = f.submit "Save", class: "btn btn-primary btn-large"
