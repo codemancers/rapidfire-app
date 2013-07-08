@@ -11,7 +11,7 @@ end
 
 gem 'haml-rails'
 gem 'jquery-rails'
-gem 'rapidfire', git: "git://github.com/code-mancers/rapidfire.git"
+gem 'rapidfire'
 gem 'devise'
 gem 'simple_form'
 gem 'flatui-rails'
