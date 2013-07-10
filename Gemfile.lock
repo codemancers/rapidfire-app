@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/code-mancers/rapidfire.git
-  revision: cdfb338940cec67fbd86b4f7d18a3c08ecee8bfc
+  revision: 40721c34deeb71921070375cfd268b41ca589ca0
   branch: rails4
   specs:
     rapidfire (1.0.0)
