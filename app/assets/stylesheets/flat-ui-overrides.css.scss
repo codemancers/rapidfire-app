@@ -8,29 +8,6 @@ body {
   margin-top: 60px;
 }
 
-.select-icon {
-  background: $firm url('/assets/select/toggle.png') no-repeat right center
-}
-
-// Tile module
-.tile {
-  &.tile-hot {
-    &:before {
-      background: url('/assets/tile/ribbon.png') 0 0 no-repeat
-    }
-  }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 2) {
-  .tile {
-    &.tile-hot {
-      &:before {
-        background-image: url('../images/tile/ribbon-2x.png')
-      }
-    }
-  }
-}
-
 .dk_container.select {
   min-width: 200px;
 }

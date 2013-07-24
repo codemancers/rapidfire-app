@@ -5,6 +5,16 @@ GIT
     rapidfire (1.1.0)
       rails (>= 3.2.13)
 
+GIT
+  remote: git://github.com/iffyuva/flatui-rails.git
+  revision: a2bdfcebfb8f64be1266ed62839911fde38c7729
+  branch: rails4
+  specs:
+    flatui-rails (0.0.4)
+      bootstrap-sass (>= 2.3.1)
+      railties (>= 3.1)
+      sass-rails (>= 3.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -35,7 +45,7 @@ GEM
     arel (4.0.0)
     atomic (1.1.10)
     bcrypt-ruby (3.1.1)
-    bootstrap-sass (2.2.2.0)
+    bootstrap-sass (2.3.2.1)
       sass (~> 3.2)
     builder (3.1.4)
     coffee-rails (4.0.0)
@@ -53,10 +63,6 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    flatui-rails (0.0.4)
-      bootstrap-sass (= 2.2.2)
-      railties (>= 3.1)
-      sass-rails (>= 3.2.0)
     haml (4.0.3)
       tilt
     haml-rails (0.4)
@@ -120,7 +126,7 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     thor (0.18.1)
-    thread_safe (0.1.0)
+    thread_safe (0.1.2)
       atomic
     tilt (1.4.1)
     treetop (1.4.14)
@@ -139,7 +145,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise (= 3.0.0.rc)
-  flatui-rails
+  flatui-rails!
   haml-rails
   jquery-rails
   pg

@@ -16,7 +16,7 @@ gem 'haml-rails'
 gem 'rapidfire', git: "git://github.com/code-mancers/rapidfire.git"
 gem 'devise', '3.0.0.rc'
 gem 'simple_form', '3.0.0.rc'
-gem 'flatui-rails'
+gem 'flatui-rails', git: "git://github.com/iffyuva/flatui-rails.git", branch: "rails4"
 
 group :development do
   gem 'quiet_assets'
