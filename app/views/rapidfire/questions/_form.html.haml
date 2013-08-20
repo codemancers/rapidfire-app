@@ -3,7 +3,7 @@
 = simple_form_for [@question_group, question] do |f|
   .row-fluid
     .span5
-      = f.input :type, collection: Rapidfire::QuestionProxy::QUESTION_TYPES,
+      = f.input :type, collection: Rapidfire::QuestionForm::QUESTION_TYPES,
         include_blank: false, input_html: { class: "input-xlarge" }
       = f.input :question_text, input_html: { class: "input-xlarge" }
       = f.input :answer_options, as: :text, input_html: { rows: 4, class: "input-xlarge" }

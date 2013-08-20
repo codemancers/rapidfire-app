@@ -12,5 +12,7 @@
           class: "btn btn-primary"
       - if can_administer?
         %li
+          = link_to "Results", [:results, question_group], class: "btn btn-info"
+        %li
           = link_to "Delete", [question_group], method: :delete, remote: true,
             class: "btn btn-danger"

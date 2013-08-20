@@ -1,8 +1,10 @@
 GIT
   remote: git://github.com/code-mancers/rapidfire.git
-  revision: 76d7c5ff3c638891464af5d7627ad073990e9be7
+  revision: a3cf1a89c260ef88f87af9675639d901dd897b61
+  branch: survey-results
   specs:
     rapidfire (1.1.0)
+      active_model_serializers (~> 0.8.1)
       rails (>= 3.2.13)
 
 GIT
@@ -27,6 +29,8 @@ GEM
       erubis (~> 2.7.0)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
+    active_model_serializers (0.8.1)
+      activemodel (>= 3.0)
     activemodel (4.0.0)
       activesupport (= 4.0.0)
       builder (~> 3.1.0)
@@ -43,7 +47,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.0)
-    atomic (1.1.10)
+    atomic (1.1.12)
     bcrypt-ruby (3.1.1)
     bootstrap-sass (2.3.2.1)
       sass (~> 3.2)
@@ -80,7 +84,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.23)
     minitest (4.7.5)
-    multi_json (1.7.7)
+    multi_json (1.7.8)
     orm_adapter (0.4.0)
     pg (0.15.1)
     polyglot (0.3.3)
