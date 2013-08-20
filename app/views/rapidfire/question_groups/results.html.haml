@@ -1,26 +1,11 @@
 %h1 Results
 
-- @question_group_results.each do |result|
-  %hr
-  %div
-    %h4
-      Question:
-      = result.question.question_text
-    %p
-      - if result.results.is_a?(Array)
-        %ol
-          - result.results.each do |answer|
-            %li= answer
-      - elsif result.results.is_a?(Hash)
-        %table.table.table-striped.table-bordered
-          %thead
-            %tr
-              %th Option
-              %th Count
-          %tbody
-            - result.results.each do |option, count|
-              %tr
-                %td= option
-                %td= count
+%ul.nav.nav-tabs
+  %li.active= link_to "HTML Results", "#html-results", "data-toggle" => "tab"
+  %li= link_to "JSON Results", "#json-results", "data-toggle" => "tab"
 
-%hr
+.tab-content
+  .tab-pane.active#html-results
+    = render partial: "html_results", locals: { results: @question_group_results }
+  .tab-pane#json-results
+    JSON Results

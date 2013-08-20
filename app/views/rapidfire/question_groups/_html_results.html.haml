@@ -1,0 +1,22 @@
+- results.each do |result|
+  %div
+    %h4
+      Question:
+      = result.question.question_text
+    %p
+      - if result.results.is_a?(Array)
+        %ol
+          - result.results.each do |answer|
+            %li= answer
+      - elsif result.results.is_a?(Hash)
+        %table.table.table-striped.table-bordered
+          %thead
+            %tr
+              %th Option
+              %th Count
+          %tbody
+            - result.results.each do |option, count|
+              %tr
+                %td= option
+                %td= count
+  %hr
