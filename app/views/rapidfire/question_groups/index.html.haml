@@ -1,8 +1,8 @@
 %h2
-  Question Groups
+  Surveys
   - if can_administer?
     .pull-right
-      = link_to "New Group", new_question_group_path, class: "btn btn-primary btn-large"
+      = link_to "New Survey", new_question_group_path, class: "btn btn-primary btn-large"
 %hr
 
 %table.table.table-striped
@@ -11,7 +11,7 @@
     %col{ width: "45%" }
   %thead
     %tr
-      %th Question Group
+      %th Survey
       %th
   %tbody
     = render partial: "question_group", collection: @question_groups
