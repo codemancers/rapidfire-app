@@ -17,6 +17,7 @@ gem 'rapidfire', git: "git://github.com/code-mancers/rapidfire.git", branch: "su
 gem 'devise', '3.0.0.rc'
 gem 'simple_form', '3.0.0.rc'
 gem 'flatui-rails', git: "git://github.com/iffyuva/flatui-rails.git", branch: "rails4"
+gem 'ejs'
 
 group :development do
   gem 'quiet_assets'

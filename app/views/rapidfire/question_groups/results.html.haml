@@ -8,4 +8,4 @@
   .tab-pane.active#html-results
     = render partial: "html_results", locals: { results: @question_group_results }
   .tab-pane#json-results
-    JSON Results
+    = render partial: "json_results", locals: { question_group: @question_group }
