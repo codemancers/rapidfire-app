@@ -1,7 +1,6 @@
 GIT
   remote: git://github.com/code-mancers/rapidfire.git
-  revision: 2947cba6a117769eb0363129be648ebd3ac8a7f0
-  branch: survey-results
+  revision: 61cd27bc7d600ad71cf5bf8f5fe2fbbbfd703848
   specs:
     rapidfire (1.1.0)
       active_model_serializers (~> 0.8.1)
