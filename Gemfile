@@ -13,7 +13,7 @@ gem 'jquery-rails'
 # gem 'turbolinks'
 
 gem 'haml-rails'
-gem 'rapidfire', git: "git://github.com/code-mancers/rapidfire.git"
+gem 'rapidfire'
 gem 'devise', '3.0.0.rc'
 gem 'simple_form', '3.0.0.rc'
 gem 'flatui-rails', git: "git://github.com/iffyuva/flatui-rails.git", branch: "rails4"
