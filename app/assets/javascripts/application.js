@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require underscore
 //= require bootstrap
-//= require flat-ui
 //= require chart
 //= require_tree ./templates
 //= require result-chart
