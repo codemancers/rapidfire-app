@@ -3,7 +3,7 @@
 
 .row-fluid
   .span6
-    = simple_form_for resource, as: resource_name, url: session_path(resource_name) do |f|
+    = simple_form_for :user, url: session_path do |f|
       = f.input :email, required: false, autofocus: true
       = f.input :password, required: false
       = f.submit "Sign in", class: "btn btn-primary btn-large"

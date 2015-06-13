@@ -6,11 +6,11 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      .nav-collapse.collapse
+      .nav-collapse
         %ul.nav.pull-right
           %li
             = link_to "Surveys", rapidfire.question_groups_path
-          - if current_user.nil?
-            %li= link_to "Login", main_app.new_user_session_path
+          - if current_user
+            %li= link_to "Logout", main_app.session_path, method: :delete
           - else
-            %li= link_to "Logout", main_app.destroy_user_session_path, method: :delete
+            %li= link_to "Login", main_app.new_session_path

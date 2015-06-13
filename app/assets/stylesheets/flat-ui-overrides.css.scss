@@ -5,7 +5,7 @@
 @import "flat-ui";
 
 body {
-  margin-top: 60px;
+  margin-top: 120px;
 }
 
 .dk_container.select {
@@ -26,4 +26,16 @@ footer {
   width:  16px;
   height: 16px;
   margin: 2px 5px 0 0;
+}
+
+.navbar .nav > li {
+  float: left;
+}
+
+.navbar .brand {
+  float: left
+}
+
+.btn-navbar {
+  float: right;
 }
