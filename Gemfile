@@ -21,6 +21,7 @@ gem 'ejs'
 group :development do
   gem 'pry-remote', '~> 0.1.7'
   gem 'quiet_assets'
+  gem 'spring'
 end
 
 group :production do
