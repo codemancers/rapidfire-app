@@ -3,8 +3,9 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if create_params[:email] == 'admin@example.com' &&
-        create_params[:password] == 'password'
+    user = User.find_by(email: create_params[:email])
+
+    if user && user.authenticate(create_params[:password])
       session[:user_id] = User.first.id
       redirect_to rapidfire.root_path
     else
