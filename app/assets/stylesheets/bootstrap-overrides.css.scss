@@ -2,19 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+//Import bootstrap-sprockets
+@import "bootstrap-sprockets";
+
+// Import flatly variables
+@import "bootswatch/flatly/variables";
+
+// Then bootstrap itself
 @import "bootstrap";
 
+// Bootstrap body padding for fixed navbar
 body {
-  margin-top: 60px;
+  padding-top: 60px;
 }
 
-.navbar-inverse {
-  background-color: #34495E;
+// And finally bootswatch style itself
+@import "bootswatch/flatly/bootswatch";
 
-  .navbar-brand {
-    color: white;
-  }
-}
+// Whatever application styles you have go last
+@import "bootstrap";
+
 
 footer {
   position:   fixed;
@@ -30,16 +38,4 @@ footer {
   width:  16px;
   height: 16px;
   margin: 2px 5px 0 0;
-}
-
-.navbar .nav > li {
-  float: left;
-}
-
-.navbar .brand {
-  float: left
-}
-
-.btn-navbar {
-  float: right;
 }
