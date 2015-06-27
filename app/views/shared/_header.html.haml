@@ -1,16 +1,16 @@
-.navbar.navbar-inverse.navbar-fixed-top.index
-  .navbar-inner
-    .container
-      = link_to "Rapidfire Demo", root_path, class: "brand"
-      %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      .nav-collapse
-        %ul.nav.pull-right
-          %li
-            = link_to "Surveys", rapidfire.question_groups_path
-          - if current_user
-            %li= link_to "Logout", main_app.session_path, method: :delete
-          - else
-            %li= link_to "Login", main_app.new_session_path
+.navbar.navbar-inverse.navbar-fixed-top
+  .container
+    .navbar-header
+      = link_to "Rapidfire Demo", root_path, class: "navbar-brand"
+      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+        %span.glyphicon.glyphicon-bar
+        %span.glyphicon.glyphicon-bar
+        %span.glyphicon.glyphicon-bar
+    .navbar-collapse.collapse.pull-right
+      %ul.nav.navbar-nav
+        %li
+          = link_to "Surveys", rapidfire.question_groups_path
+        - if current_user
+          %li= link_to "Logout", main_app.session_path, method: :delete
+        - else
+          %li= link_to "Login", main_app.new_session_path

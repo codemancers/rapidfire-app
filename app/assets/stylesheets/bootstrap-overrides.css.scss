@@ -2,14 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import "flat-ui";
+@import "bootstrap";
 
 body {
   margin-top: 120px;
 }
 
-.dk_container.select {
-  min-width: 200px;
+.navbar-inverse {
+  background-color: #34495E;
+
+  .navbar-brand {
+    color: white;
+  }
 }
 
 footer {

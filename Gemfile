@@ -14,7 +14,6 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'rapidfire', path: '/Users/yuva/opensource/rapidfire'
 gem 'simple_form'
-gem 'flatui-rails', github: "iffyuva/flatui-rails", branch: "rails4"
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'ejs'
 
