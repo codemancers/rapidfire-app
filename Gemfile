@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'bootswatch-rails'
 gem 'ejs'
+gem 'bcrypt', '~> 3.1.7'
 
 group :development do
   gem 'pry-remote', '~> 0.1.7'
