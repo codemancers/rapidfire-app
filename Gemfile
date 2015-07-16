@@ -18,7 +18,11 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'bootswatch-rails'
 gem 'ejs'
 gem 'bcrypt', '~> 3.1.7'
+gem 'actioncable', path: '/Users/yuva/opensource/actioncable'
+gem 'faye-websocket', '~> 0.10.0'
 gem 'delayed_job_active_record'
+gem 'puma'
+gem 'daemons'
 
 group :development do
   gem 'pry-remote', '~> 0.1.7'

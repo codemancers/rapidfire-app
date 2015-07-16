@@ -15,5 +15,8 @@
 //= require underscore
 //= require bootstrap
 //= require chart
+//= require cable
 //= require_tree ./templates
 //= require result-chart
+//= require rfcable
+//= require surveys
