@@ -9,7 +9,7 @@
     .navbar-collapse.collapse.pull-right
       %ul.nav.navbar-nav
         %li
-          = link_to "Surveys", rapidfire.question_groups_path
+          = link_to "Surveys", rapidfire.surveys_path
         - if current_user
           %li= link_to "Logout", main_app.session_path, method: :delete
         - else

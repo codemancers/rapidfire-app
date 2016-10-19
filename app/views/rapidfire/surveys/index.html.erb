@@ -1,0 +1,23 @@
+<h2>
+  Surveys
+  <% if can_administer? %>
+    <%= link_to "New Survey", new_survey_path %>
+  <% end %>
+</h2>
+<hr/>
+
+<table>
+  <colgroup>
+    <col>
+    <col width="250">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Survey</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: "survey", collection: @surveys %>
+  </tbody>
+</table>

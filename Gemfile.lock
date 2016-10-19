@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/code-mancers/rapidfire.git
-  revision: c02703e66c02979a6921a3fc294b35416d1cde2d
+  revision: 42289817e029d7d8d8fa5498833c37590cfa97d3
   specs:
     rapidfire (2.1.0)
       active_model_serializers (~> 0.8.1)
