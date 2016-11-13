@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.3.1'
 
-gem 'rails', '~> 4.2.3'
+gem 'rails', '~> 5.0', '>= 5.0.0.1'
 gem 'pg'
 
 gem 'sass-rails',   '~> 5.0'
@@ -12,7 +12,7 @@ gem 'jquery-rails'
 # gem 'turbolinks'
 
 gem 'haml-rails'
-gem 'rapidfire'
+gem 'rapidfire', :git => 'https://github.com/code-mancers/rapidfire.git'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'bootswatch-rails'
@@ -21,7 +21,6 @@ gem 'bcrypt', '~> 3.1.7'
 
 group :development do
   gem 'pry-remote', '~> 0.1.7'
-  gem 'quiet_assets'
   gem 'spring'
 end
 
