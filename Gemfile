@@ -12,7 +12,7 @@ gem 'jquery-rails'
 # gem 'turbolinks'
 
 gem 'haml-rails'
-gem 'rapidfire', :git => 'https://github.com/code-mancers/rapidfire.git'
+gem 'rapidfire', '~> 3.0'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'bootswatch-rails'
