@@ -1,4 +1,4 @@
-class RenameAnswerGroupsAndQuestionGroups < ActiveRecord::Migration
+class RenameAnswerGroupsAndQuestionGroups < ActiveRecord::Migration[4.2]
   def change
     rename_table :rapidfire_answer_groups, :rapidfire_attempts
     rename_table :rapidfire_question_groups, :rapidfire_surveys
