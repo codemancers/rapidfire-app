@@ -1,9 +1,11 @@
 <h2>
-  Surveys
-  <% if can_administer? %>
-    <%= link_to "New Survey", new_survey_path %>
-  <% end %>
+    Surveys
 </h2>
+<% if can_administer? %>
+  <h3>
+    <%= link_to "New Survey", new_survey_path %>
+  </h3>
+<% end %>
 <hr/>
 
 <table>
