@@ -19,3 +19,19 @@ body {
   color:#fafafa;
   text-align:center;
 }
+.is-ancestor {
+  align-items:center;
+}
+.tile.is-parent {
+  min-width:450px;
+  padding:3em;
+}
+.signup-button {
+  padding-top:0.5em;
+}
+.logo {
+  color:#fafafa;
+}
+.logo:hover {
+  color:#fafafa
+}

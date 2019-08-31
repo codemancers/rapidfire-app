@@ -3,14 +3,16 @@
     <nav class="level">
       <div class="level-left">
         <div class="level-item">
-          Rapidfire
+          <a href="/" class="title logo">Rapidfire</a>
         </div>
       </div>
       <div class="level-right">
         <p class="level-item">
-        <a class="button" href="/users/sign_up">
-            Login
-        </a>
+          <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, method: :delete, class:"button") %>
+          <% else %>
+            <%= link_to('Login', new_user_registration_path, class:"button") %>
+          <% end %>
         </p>
         <p class="level-item">
             <a class="button">
