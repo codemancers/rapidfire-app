@@ -1,11 +1,10 @@
 {
-  "name": "rapidfire_client",
+  "name": "new_rapidfire",
   "private": true,
   "dependencies": {
-    "@rails/actioncable": "^6.0.0-alpha",
-    "@rails/activestorage": "^6.0.0-alpha",
     "@rails/ujs": "^6.0.0-alpha",
     "@rails/webpacker": "^4.0.7",
+    "bulma": "^0.7.5",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
