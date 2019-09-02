@@ -13,7 +13,7 @@
   </div>
   <footer class="card-footer">
     <% if can_administer? %>
-    <%= link_to "Edit", survey_questions_path(survey), class: "card-footer-item" %>
+    <%= link_to "Questions", survey_questions_path(survey), class: "card-footer-item" %>
     <%= link_to "Results", [:results, survey], class: "card-footer-item" %>
     <%= link_to "Delete", survey, method: :delete, class: "card-footer-item" %>
     <% end %>
@@ -21,22 +21,3 @@
   </footer>
 </div>
 <br>
-
-<%#   <td> %>
-<%#     <% if can_administer? %1> %>
-<%#       <%= link_to survey.name, survey_questions_path(survey) %1> %>
-<%#     <% else %1> %>
-<%#       <%= survey.name %1> %>
-<%#     <% end %1> %>
-<%#   </td> %>
-<%#   <td> %>
-<%#     <ul class="horizontal-list"> %>
-<%#       <li><%= link_to "Answer Questions", new_survey_attempt_path(survey) %1></li> %>
-<%#       <% if can_administer? %1> %>
-<%#         <li><%= link_to "Results", [:results, survey] %1></li> %>
-<%#         <li><%= link_to "Edit", edit_survey_path(survey) %1></li> %>
-<%#         <li><%= link_to "Delete", survey, method: :delete %1></li> %>
-<%#       <% end %1> %>
-<%#     </ul> %>
-<%#   </td> %>
-<%# </tr> %>

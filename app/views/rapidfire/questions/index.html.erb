@@ -1,26 +1,30 @@
-<h2>
-  <%= t('rapidfire.questions.header') -%>
-</h2>
-<h3>
-  <%= link_to t('rapidfire.questions.new'), new_survey_question_path(@survey) %>
-</h3>
-<h4>
-  <%= link_to t('rapidfire.questions.back'), surveys_path(@survey) %>
-</h4>
-<hr/>
+<div class="container is-fluid full-height">
+  <div class="title is-4 notification level">
+    <div class="level-left">
+      <p class="level-item">
+      <% if @questions.count > 1 %>
+        <%= @questions.count %> Questions
+      <% else %>
+        Questions
+      <% end %>
+      </p>
+    </div>
+    <div class="level-right">
+      <p class="level-item">
+        <%= link_to t('rapidfire.questions.back'), surveys_path(@survey), class: "button" %>
+      </p>
+      <p class="level-item">
+        <%= link_to "New Question", new_survey_question_path(@survey), class: "button" %>
+      </p>
+    </div>
+  </div>
 
-<table>
-  <colgroup>
-    <col>
-    <col width="250">
-  </colgroup>
-  <thead>
-    <tr>
-      <th><%= t('rapidfire.questions.question') -%></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
+  <% if @questions.count == 0 %>
+    <div class="align-content-center" style="height:70%;">
+        It's all empty here! Give your survey some questions to deal with!
+    </div>
+  <% else %>
     <%= render partial: "question", collection: @questions %>
-  </tbody>
-</table>
+    <hr/>
+  <% end %>
+</div>
