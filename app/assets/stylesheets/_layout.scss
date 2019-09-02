@@ -22,10 +22,7 @@ body {
 .is-ancestor {
   align-items:center;
 }
-.tile.is-parent {
-  min-width:450px;
-  padding:3em;
-}
+
 .signup-button {
   padding-top:0.5em;
 }
@@ -34,4 +31,31 @@ body {
 }
 .logo:hover {
   color:#fafafa
+}
+.heroku-button {
+  background-color:#7056BF
+}
+.align-content-center {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+}
+.full-height {
+  height: 100%;
+}
+.height-fit-content {
+  height:fit-content;
+  margin-top:5em;
+}
+@media screen and (min-width: 500px) {
+  .tile.is-parent {
+    min-width:500px;
+    padding:3em;
+  }
+}
+@media screen and (max-width: 350px) {
+  .no-padding-section {
+    padding: 0em;
+  }
 }

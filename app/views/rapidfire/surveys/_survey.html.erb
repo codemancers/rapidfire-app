@@ -1,0 +1,42 @@
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      <%= survey.name %>
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <%= survey.introduction %>
+      <br>
+      <time datetime="2016-1-1" class="has-text-grey">Created <%= time_ago_in_words(survey.created_at) + ' ago' %></time>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <% if can_administer? %>
+    <%= link_to "Edit", survey_questions_path(survey), class: "card-footer-item" %>
+    <%= link_to "Results", [:results, survey], class: "card-footer-item" %>
+    <%= link_to "Delete", survey, method: :delete, class: "card-footer-item" %>
+    <% end %>
+    <%= link_to "Answer", new_survey_attempt_path(survey), class: "card-footer-item" %>
+  </footer>
+</div>
+<br>
+
+<%#   <td> %>
+<%#     <% if can_administer? %1> %>
+<%#       <%= link_to survey.name, survey_questions_path(survey) %1> %>
+<%#     <% else %1> %>
+<%#       <%= survey.name %1> %>
+<%#     <% end %1> %>
+<%#   </td> %>
+<%#   <td> %>
+<%#     <ul class="horizontal-list"> %>
+<%#       <li><%= link_to "Answer Questions", new_survey_attempt_path(survey) %1></li> %>
+<%#       <% if can_administer? %1> %>
+<%#         <li><%= link_to "Results", [:results, survey] %1></li> %>
+<%#         <li><%= link_to "Edit", edit_survey_path(survey) %1></li> %>
+<%#         <li><%= link_to "Delete", survey, method: :delete %1></li> %>
+<%#       <% end %1> %>
+<%#     </ul> %>
+<%#   </td> %>
+<%# </tr> %>

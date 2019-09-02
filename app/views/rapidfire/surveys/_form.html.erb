@@ -1,0 +1,49 @@
+<div class="container is-fluid full-height">
+  <div class="title is-4 notification level">
+    <div class="level-left">
+      <p class="level-item">
+      <%= survey.new_record? ? "Add a Survey" : "Edit Survey" %>
+      </p>
+    </div>
+    <div class="level-right">
+      <a class="button" href="/rapidfire">Back to Surveys</a>
+    </div>
+  </div>
+
+  <div class="align-content-center height-fit-content">
+    <div class="tile is-ancestor is-vertical">
+      <div class="tile is-parent is-vertical box">
+        <article class="tile is-child">
+          <%= form_for survey do |f| %>
+            <%- if survey.errors.any? %>
+              <ul>
+                <%- survey.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            <% end %>
+
+            <div class="form-group field">
+              <%= f.label :name, class: "title is-6" %>
+              <%= f.text_field :name, class: "input" %>
+            </div>
+
+            <div class="form-group field">
+              <%= f.label :introduction, class: "title is-6" %>
+              <%= f.text_area :introduction, class: "textarea" %>
+            </div>
+
+            <%= f.label :after_survey_content, class: "title is-6" %>
+            <%= f.text_area :after_survey_content, class: "textarea" %>
+
+            <br>
+
+            <div class="level-item actions signup-button">
+              <%= f.submit "Create Survey", class: "button is-info" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

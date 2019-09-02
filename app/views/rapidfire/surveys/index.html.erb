@@ -1,0 +1,49 @@
+<div class="container is-fluid full-height">
+<div class="title is-4 notification level">
+  <div class="level-left">
+    <p class="level-item">
+    <% if @surveys.count > 1 %>
+      <%= @surveys.count %> Surveys
+    <% else %>
+      Surveys
+    <% end %>
+    </p>
+    <div class="level-item">
+      <div class="field has-addons">
+        <p class="control">
+          <input class="input" type="text" placeholder="Find a survey">
+        </p>
+        <p class="control">
+          <button class="button">
+            Search
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+  <p class="level-right">
+    <% if can_administer? %>
+      <%= link_to "New Survey", new_survey_path, class: "button" %>
+    <% end %>
+  </p>
+</div>
+
+<% if @surveys.count == 0 %>
+  <div class="align-content-center" style="height:70%;">
+    <% if can_administer? %>
+      It feels a bit lonely here. Add a new survey to continue.
+    <% else %>
+      All clear here! No suveys available yet.
+    <% end %>
+  </p>
+  </div>
+
+<% else %>
+      <%= render partial: "survey", collection: @surveys.order(created_at: :desc) %>
+  <hr/>
+
+  <% if defined?(Kaminari) %>
+    <%= paginate @surveys %>
+  <% end %>
+<% end %>
+</div>
