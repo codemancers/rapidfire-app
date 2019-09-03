@@ -1,13 +1,25 @@
-<h2><%= t('rapidfire.attempts.header') -%></h2>
-<hr/>
-
-<p><%= @survey.introduction %></p>
-
-<%= form_for([@survey, @attempt_builder]) do |f| %>
-  <%- @attempt_builder.answers.each do |answer| %>
-    <%= f.fields_for("#{answer.question.id}", answer) do |answer_form| %>
-      <%= render_answer_form_helper(answer, answer_form) %>
-    <% end %>
-  <% end %>
-  <%= f.submit submit_text %>
-<% end %>
+<div class="container is-fluid full-height">
+  <div class="align-content-center height-fit-content margin-top-5">
+    <div class="tile is-ancester is-8">
+      <div class="tile is-parent is-vertical box">
+        <div class="tile is-child">
+          <p class="subtitle"><h2><%= @survey.introduction -%></p>
+        </div>
+          <article>
+            <%= form_for([@survey, @attempt_builder]) do |f| %>
+              <%- @attempt_builder.answers.each do |answer| %>
+                <%= f.fields_for("#{answer.question.id}", answer) do |answer_form| %>
+                  <%= render_answer_form_helper(answer, answer_form) %>
+                <% end %>
+                <br>
+              <% end %>
+              <div class="level-item">
+                <%= f.submit submit_text, class: "button is-info" %>
+              </div>
+            <% end %>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

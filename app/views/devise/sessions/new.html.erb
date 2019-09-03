@@ -9,12 +9,12 @@
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field">
           <%= f.label :email, class: "title is-6"%><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input is-primary", placeholder: "Email" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input", placeholder: "Email" %>
         </div>
 
         <div class="field">
           <%= f.label :password, class: "title is-6"%><br />
-          <%= f.password_field :password, autocomplete: "current-password", class: "input is-primary", placeholder: "Password" %>
+          <%= f.password_field :password, autocomplete: "current-password", class: "input", placeholder: "Password" %>
         </div>
 
         <% if devise_mapping.rememberable? %>
@@ -29,7 +29,7 @@
             <%= link_to("Not yet registered?", new_user_registration_path) %>
           </div>
           <div class="level-item actions signup-button">
-            <%= f.submit "Log in", class: "button" %>
+            <%= f.submit "Log in", class: "button is-info" %>
           </div>
         </div>
       <% end %>

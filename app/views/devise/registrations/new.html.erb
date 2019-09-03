@@ -11,7 +11,7 @@
 
         <div class="field">
           <%= f.label :email, class: "title is-6" %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input is-primary", placeholder: "Email" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input", placeholder: "Email" %>
         </div>
 
         <div class="field">
@@ -19,12 +19,12 @@
           <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>
           <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password", class: "input is-primary", placeholder: "Password" %>
+          <%= f.password_field :password, autocomplete: "new-password", class: "input", placeholder: "Password" %>
         </div>
 
         <div class="field">
           <%= f.label :password_confirmation, class: "title is-6" %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input is-primary", placeholder: "Password Confirmation" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input", placeholder: "Password Confirmation" %>
         </div>
 
         <div class="level-right">
@@ -32,7 +32,7 @@
             <%= link_to("Already registered?", user_session_path) %>
           </div>
           <div class="level-item actions signup-button">
-            <%= f.submit "Sign up", class: "button"%>
+            <%= f.submit "Sign up", class: "button is-info"%>
           </div>
         </div>
       <% end %>

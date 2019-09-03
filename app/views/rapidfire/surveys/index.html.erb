@@ -21,15 +21,17 @@
         </div>
       </div>
     </div>
-    <p class="level-right">
-      <% if can_administer? %>
-        <%= link_to "New Survey", new_survey_path, class: "button" %>
-      <% end %>
-    </p>
+    <div class="level-right">
+      <div class="level-item">
+        <% if can_administer? %>
+          <%= link_to "New Survey", new_survey_path, class: "button" %>
+        <% end %>
+      </div>
+    </div>
   </div>
 
   <% if @surveys.count == 0 %>
-    <div class="align-content-center" style="height:70%;">
+    <div class="align-content-center" style="height:25%;margin-left:0.5em">
       <% if can_administer? %>
         It feels a bit lonely here. Add a new survey to continue.
       <% else %>

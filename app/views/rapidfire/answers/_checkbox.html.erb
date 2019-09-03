@@ -1,10 +1,11 @@
 <%= render partial: "rapidfire/answers/errors", locals: {answer: answer} %>
 
 <div class="form-group">
-<%= f.label :answer_text, answer.question.question_text %>
+<%= f.label :answer_text, answer.question.question_text, class: "title is-6" %>
+<br>
 <%= f.fields_for :answer_text do |af| %>
   <%- answer.question.options.each_with_index do |option, index| %>
-    <%= af.label index do %>
+    <%= af.label index, class: "checkbox subtitle is-6 full-width height-fit-content" do %>
       <%= af.check_box index, { checked: checkbox_checked?(answer, option) }, option %>
       <%= option %>
     <% end %>

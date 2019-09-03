@@ -46,7 +46,9 @@ body {
 }
 .height-fit-content {
   height:fit-content;
-  margin-top:5em;
+}
+.margin-top-5 {
+  margin-top: 5em;
 }
 .full-width {
   width: 100%;
@@ -54,12 +56,23 @@ body {
 .level-separator {
   margin-top: 2em;
 }
+.width-fix-content {
+  width: fit-content;
+}
+.fixed-footer-item {
+  max-width:fit-content;
+}
 @media screen and (min-width: 700px) {
   .level-separator {
     margin:3em;
   }
   .create-button-margin {
     margin-top: 3em;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .fixed-footer-item {
+    max-width: 200px;
   }
 }
 @media screen and (min-width: 500px) {
@@ -71,5 +84,11 @@ body {
 @media screen and (max-width: 350px) {
   .no-padding-section {
     padding: 0em;
+  }
+}
+@media screen and (min-width: 500px) {
+.tile.is-parent {
+  padding-top:1em;
+  padding-bottom:1em;
   }
 }

@@ -1,1 +1,50 @@
-<%= render partial: 'form', locals: { submit_text: t('rapidfire.attempts.save') } %>
+<div class="container is-fluid full-height">
+  <div class="title is-4 notification level">
+    <div class="level-left">
+      <p class="level-item">
+        Taking Survey - <%=@survey.name%>
+      </p>
+    </div>
+    <div class="level-right">
+      <p class="level-item">
+        <%= link_to t('rapidfire.questions.back'), surveys_path(@survey), class: "button" %>
+      </p>
+      <% if current_user.try(:admin?) %>
+        <p class="level-item">
+          <%= link_to "Add a Question", new_survey_question_path(@survey), class: "button" %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+
+  <% if @survey.questions.count == 0 %>
+    <% if current_user.try(:admin?) %>
+      <div class="align-content-center" style="height:25%;margin-left:0.5em;">
+        <div class="level">
+          <div class="level-item">
+            This Survey does not have any questions yet!
+          </div>
+          <div class="level-item">
+            <%= link_to "Add a question", new_survey_question_path(@survey), style: "margin-right:0.3em;margin-left:0.3em" %>
+            to the survey.
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <div class="align-content-center" style="height:25%;margin-left:0.5em;">
+        <div class="level">
+          <div class="level-item" style="margin-right:0.2em;">
+            This Survey does not have any questions yet!
+          </div>
+          <div class="level-item">
+            <%= link_to "Take me Back to surveys.", surveys_path(@survey) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <%= render partial: 'form', locals: { submit_text: "Submit" } %>
+    <hr/>
+  <% end %>
+</div>
+
