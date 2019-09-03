@@ -1,7 +1,7 @@
 GIT
-  remote: https://github.com/rapidfire/rapidfire.git
+  remote: git://github.com/code-mancers/rapidfire
   revision: abcea3eddb06c6f9eaf8559c85d73436253238ed
-  branch: fix-checkbox-answers
+  branch: fix-checkbox-answers-rails-6
   specs:
     rapidfire (4.0.0)
       active_model_serializers (~> 0.10.0)

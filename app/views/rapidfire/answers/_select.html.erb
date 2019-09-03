@@ -1,5 +1,5 @@
 <%= render partial: "rapidfire/answers/errors", locals: {answer: answer} %>
 <div class="form-group">
-<%= f.label :answer_text, answer.question.question_text %>
-<%= f.select :answer_text, answer.question.options, include_blank: true %>
+  <%= f.label :answer_text, answer.question.question_text, class: "title is-6" %><br>
+  <%= f.select :answer_text, answer.question.options, {include_blank: true}, class: "button is-notification full-width" %>
 </div>

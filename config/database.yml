@@ -1,14 +1,14 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: db
-  username: postgres
-  password: mysecretpass
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
   <<: *default
+  host: db
+  username: postgres
+  password: mysecretpass
   database: rapidfire_demo
 
 # Warning: The database defined as "test" will be erased and
