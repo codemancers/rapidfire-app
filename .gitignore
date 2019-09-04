@@ -35,7 +35,7 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-postgres-local-data
+/postgres-local-data
 
 # Ignore all logfiles and tempfiles.
 /config/database.yml
