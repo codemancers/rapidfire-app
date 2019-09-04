@@ -1,0 +1,18 @@
+%tr{ id: "question_group_#{question_group.id}" }
+  %td
+    - if can_administer?
+      = link_to question_group.name, question_group_questions_path(question_group)
+    - else
+      = question_group.name
+
+  %td
+    %ul.horizontal-list
+      %li
+        = link_to "Take this survey", new_question_group_answer_group_path(question_group),
+          class: "btn btn-primary"
+      - if can_administer?
+        %li
+          = link_to "Results", [:results, question_group], class: "btn btn-info"
+        %li
+          = link_to "Delete", [question_group], method: :delete, remote: true,
+            class: "btn btn-danger"

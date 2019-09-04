@@ -1,0 +1,14 @@
+<div class="row-fluid">
+  <div class="span12">
+    <hr>
+    <div class="result non-aggregatable">
+      <h4>Question: <%- resultObj.question_text %></h4>
+      <ul>
+        <% $.each(resultObj.results, function(index, answer) { %>
+          <li><%- answer %></li>
+        <% }); %>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>

@@ -1,0 +1,16 @@
+.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      = link_to "Rapidfire Demo", root_path, class: "navbar-brand"
+      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+        %span.glyphicon.glyphicon-bar
+        %span.glyphicon.glyphicon-bar
+        %span.glyphicon.glyphicon-bar
+    .navbar-collapse.collapse.pull-right
+      %ul.nav.navbar-nav
+        %li
+          = link_to "Surveys", rapidfire.surveys_path
+        - if current_user
+          %li= link_to "Logout", main_app.session_path, method: :delete
+        - else
+          %li= link_to "Login", main_app.new_session_path

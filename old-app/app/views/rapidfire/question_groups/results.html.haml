@@ -1,0 +1,11 @@
+%h1 Results
+
+%ul.nav.nav-tabs
+  %li.active= link_to "JSON Results", "#json-results", "data-toggle" => "tab"
+  %li= link_to "HTML Results", "#html-results", "data-toggle" => "tab"
+
+.tab-content
+  .tab-pane.active#json-results
+    = render partial: "json_results", locals: { question_group: @question_group }
+  .tab-pane#html-results
+    = render partial: "html_results", locals: { results: @question_group_results }

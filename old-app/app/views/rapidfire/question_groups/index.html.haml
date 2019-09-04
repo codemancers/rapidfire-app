@@ -1,0 +1,17 @@
+%h2
+  Surveys
+  - if can_administer?
+    .pull-right
+      = link_to "New Survey", new_question_group_path, class: "btn btn-primary"
+%hr
+
+%table.table.table-striped.table-bordered
+  %colgroup
+    %col
+    %col{ width: "45%" }
+  %thead
+    %tr
+      %th Survey
+      %th
+  %tbody
+    = render partial: "question_group", collection: @question_groups

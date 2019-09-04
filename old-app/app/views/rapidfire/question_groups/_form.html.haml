@@ -1,0 +1,5 @@
+%h3= question_group.new_record? ? "New Survey" : "Edit Survey"
+
+= simple_form_for question_group do |f|
+  = f.input :name
+  = f.submit "Save", class: "btn btn-primary"
