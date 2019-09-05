@@ -17,8 +17,20 @@
     <%= render 'layouts/navigation'%>
     <section class="section no-padding-section">
       <div class="container">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+        <% if alert %>
+          <div class="message is-danger">
+            <p class="message-body">
+              <%= alert %>
+            </p>
+          </div>
+        <% end %>
+        <% if notice %>
+          <div class="message is-success">
+            <p class="message-body">
+              <%= notice %>
+            </p>
+          </div>
+        <% end %>
         <%= yield %>
       </div>
     </section>

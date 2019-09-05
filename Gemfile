@@ -9,7 +9,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'pg'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 6.0.0'
-gem 'rapidfire', git: 'git://github.com/code-mancers/rapidfire', branch: 'fix-checkbox-answers-rails-6'
+gem 'rapidfire', git: 'git://github.com/code-mancers/rapidfire', branch: 'fix-checkbox-answerss'
 gem 'sass-rails', '~> 5'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'

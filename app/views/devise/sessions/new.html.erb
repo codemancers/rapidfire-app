@@ -8,12 +8,12 @@
     <article class="tile is-child">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field">
-          <%= f.label :email, class: "title is-6"%><br />
+          <%= f.label :email, class: "title is-6"%>
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input", placeholder: "Email" %>
         </div>
 
         <div class="field">
-          <%= f.label :password, class: "title is-6"%><br />
+          <%= f.label :password, class: "title is-6"%>
           <%= f.password_field :password, autocomplete: "current-password", class: "input", placeholder: "Password" %>
         </div>
 

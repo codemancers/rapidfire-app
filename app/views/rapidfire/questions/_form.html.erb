@@ -4,17 +4,17 @@
       <div class="tile is-ancestor">
         <div class="tile is-parent box is-vertical">
           <div class="tile is-child">
-            <%- unless form.errors.empty? %>
-              <ul>
-                <%- form.errors.full_messages.each do |message| %>
-                  <li><%= message %></li>
-                <% end %>
-              </ul>
-            <% end %>
-          </div>
-          <div class="tile is-child">
             <div class="tile is-parent full-width">
               <article class="tile is-parent is-vertical">
+                <%- unless form.errors.empty? %>
+                  <div class="message is-danger">
+                    <ul class="message-body">
+                      <%- form.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                      <% end %>
+                    </ul>
+                  </div>
+                <% end %>
                 <article class="tile is-child">
                   <div class="form-group field">
                     <%= f.label :type, class: "title is-6", style: "margin-right:1em;" %><br>

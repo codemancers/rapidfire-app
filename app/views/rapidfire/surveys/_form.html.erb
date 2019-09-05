@@ -5,11 +5,13 @@
         <article class="tile is-child">
           <%= form_for survey do |f| %>
             <%- if survey.errors.any? %>
-              <ul>
-                <%- survey.errors.full_messages.each do |message| %>
-                  <li><%= message %></li>
-                <% end %>
-              </ul>
+              <div class="message is-danger">
+                <ul class="message-body">
+                  <%- survey.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
             <% end %>
 
             <div class="form-group field">
