@@ -3,6 +3,6 @@
   "description": "This client is based on the Rapidfire gem and you can use this to conduct surveys for your projects",
   "repository": "https://github.com/code-mancers/rapidfire-demo",
   "scripts": {
-    "postdeploy": "bin/rails db:setup"
+    "postdeploy": "bin/rails db:seed"
   }
 }
