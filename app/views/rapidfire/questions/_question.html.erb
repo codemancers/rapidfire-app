@@ -1,9 +1,16 @@
-<tr id="question_<%= question.id %>">
-  <td><%= question.question_text %></td>
-  <td>
-    <ul class="horizontal-list">
-      <li><%= link_to "Edit", [:edit, question.survey, question] %></li>
-      <li><%= link_to "Delete", [question.survey, question], method: :delete %></li>
-    </ul>
-  </td>
-</tr>
+<%# <tr id="question_<%= question.id %1>"> %>
+<%#   <td></td> %>
+<%#   <td> %>
+<%#     <ul class="horizontal-list"> %>
+<%#       <li></li> %>
+<%#       <li></li> %>
+<%#     </ul> %>
+<%#   </td> %>
+<%# </tr> %>
+<div class="card">
+  <div class="card-footer">
+    <div class="card-footer-item"><%= question.question_text %></div>
+    <div class="card-footer-item fixed-footer-item"><%= link_to "Edit", [:edit, question.survey, question] %></div>
+    <div class="card-footer-item fixed-footer-item"><%= link_to "Delete", [question.survey, question], method: :delete %></div>
+  </div>
+</div>

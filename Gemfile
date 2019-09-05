@@ -1,30 +1,25 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
-ruby '2.3.1'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '~> 5.0', '>= 5.0.0.1'
+ruby '2.6.3'
+
+gem 'bootsnap', '>= 1.4.2', require: false
 gem 'pg'
+gem 'puma', '~> 3.11'
+gem 'rails', '~> 6.0.0'
+gem 'rapidfire', git: 'git://github.com/code-mancers/rapidfire', branch: 'fix-checkbox-answerss'
+gem 'sass-rails', '~> 5'
+gem 'turbolinks', '~> 5'
+gem 'webpacker', '~> 4.0'
+gem 'devise'
 
-gem 'sass-rails',   '~> 5.0'
-gem 'uglifier',     '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
-
-gem 'jquery-rails'
-# gem 'turbolinks'
-
-gem 'haml-rails'
-gem 'rapidfire'
-gem 'simple_form'
-gem 'bootstrap-sass', '~> 3.3.5.1'
-gem 'bootswatch-rails'
-gem 'ejs'
-gem 'bcrypt', '~> 3.1.7'
-gem 'kaminari'
-
-group :development do
-  gem 'pry-remote', '~> 0.1.7'
-  gem 'spring'
+group :development, :test do
+  gem 'byebug'
 end
 
-group :production do
-  gem 'rails_12factor'
+group :development do
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end

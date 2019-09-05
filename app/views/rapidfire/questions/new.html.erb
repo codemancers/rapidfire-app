@@ -1,1 +1,16 @@
-<%= render partial: 'form', locals: { form: @question_form, url: survey_questions_path(@survey), method: :post, submit_text: 'Create Question' } %>
+<div class="container is-fluid full-height">
+  <div class="title is-4 notification level">
+    <div class="level-left">
+      <p class="level-item">
+        Add a Question
+      </p>
+    </div>
+    <div class="level-right">
+      <div class="level-item">
+        <%= link_to "Back to Questions", survey_questions_path(@survey), class: "button" %>
+      </div>
+    </div>
+  </div>
+
+  <%= render partial: 'form', locals: { form: @question_form, url: survey_questions_path(@survey), method: :post, submit_text: 'Create Question' } %>
+</div>

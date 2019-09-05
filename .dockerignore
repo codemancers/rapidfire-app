@@ -1,0 +1,8 @@
+.git
+.bundle
+log
+tmp
+vendor/bundle
+.undodir
+tags
+node_modules

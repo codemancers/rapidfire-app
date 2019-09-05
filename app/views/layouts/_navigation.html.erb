@@ -1,0 +1,28 @@
+<header class="header">
+  <div class="container">
+    <nav class="level">
+      <div class="level-left">
+        <div class="level-item">
+          <a href="/" class="title logo">Rapidfire</a>
+        </div>
+      </div>
+      <div class="level-right">
+        <p class="level-item">
+          <% if user_signed_in? %>
+            <%= link_to('Logout', '/users/sign_out', method: :delete, class:"button") %>
+          <% else %>
+            <%= link_to('Login', '/users/sign_in', class:"button") %>
+          <% end %>
+        </p>
+        <p class="level-item">
+            <a class="button">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+            <span>GitHub</span>
+          </a>
+        </p>
+      </div>
+    </nav>
+  </div>
+</header>

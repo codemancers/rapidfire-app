@@ -1,15 +1,40 @@
-<h3><%= survey.new_record? ? "New Survey" : "Edit Survey" %></h3>
+<div class="container is-fluid full-height">
+  <div class="align-content-center height-fit-content margin-top-5">
+    <div class="tile is-ancestor is-vertical box is-6">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child">
+          <%= form_for survey do |f| %>
+            <%- if survey.errors.any? %>
+              <div class="message is-danger">
+                <ul class="message-body">
+                  <%- survey.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
 
-<%= form_for survey do |f| %>
-  <%- if survey.errors.any? %>
-    <ul>
-      <%- survey.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  <% end %>
+            <div class="form-group field">
+              <%= f.label :name, class: "title is-6" %>
+              <%= f.text_field :name, class: "input" %>
+            </div>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit %>
-<% end %>
+            <div class="form-group field">
+              <%= f.label :introduction, class: "title is-6" %>
+              <%= f.text_area :introduction, class: "textarea" %>
+            </div>
+
+            <%= f.label :after_survey_content, class: "title is-6" %>
+            <%= f.text_area :after_survey_content, class: "textarea" %>
+
+            <br>
+
+            <div class="level-item actions signup-button">
+              <%= f.submit "Create Survey", class: "button is-info" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

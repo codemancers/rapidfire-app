@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+$family-primary:'Ubuntu', sans-serif;
+@import "~bulma";
+body {
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  height:100vh;
+}
+.header {
+  background-color:#342E37;
+  color:#fafafa;
+  padding:1rem 1rem;
+}
+.section {
+  display:flex;
+  flex:1 0 auto;
+}
+.footer {
+  background-color:#342E37;
+  padding:2rem 1rem;
+  color:#fafafa;
+  text-align:center;
+}
+.is-ancestor {
+  align-items:center;
+}
+
+.signup-button {
+  padding-top:0.5em;
+}
+.logo {
+  color:#fafafa;
+}
+.logo:hover {
+  color:#fafafa
+}
+.heroku-button {
+  background-color:#7056BF
+}
+.align-content-center {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+}
+.full-height {
+  height: 100%;
+}
+.height-fit-content {
+  height:fit-content;
+}
+.margin-top-5 {
+  margin-top: 5em;
+}
+.full-width {
+  width: 100%;
+}
+.level-separator {
+  margin-top: 2em;
+}
+.width-fix-content {
+  width: fit-content;
+}
+.fixed-footer-item {
+  max-width:fit-content;
+}
+@media screen and (min-width: 700px) {
+  .level-separator {
+    margin:3em;
+  }
+  .create-button-margin {
+    margin-top: 3em;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .fixed-footer-item {
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .tile.is-parent {
+    min-width:500px;
+    padding:3em;
+  }
+}
+@media screen and (max-width: 350px) {
+  .no-padding-section {
+    padding: 0em;
+  }
+}
+@media screen and (min-width: 500px) {
+.tile.is-parent {
+  padding-top:1em;
+  padding-bottom:1em;
+  }
+}
