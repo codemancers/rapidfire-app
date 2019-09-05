@@ -24,7 +24,7 @@ You can easily run this demo app on your local with docker-compose:
 ```bash
 docker-compose up
 ```
-By default, port 3000 is exposed, visit http://localhost:3000 or with http://rapidfire-client.test:3000 if you have something like dnsmasq setup.
+By default, port 3000 is exposed, visit http://localhost:3000 or with http://rapidfire.test:3000 if you have something like dnsmasq setup.
 
 If you don't prefer docker, then you could run rails server locally with a database you prefer by updating the database.yml file.
 
