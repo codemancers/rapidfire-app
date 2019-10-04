@@ -4,8 +4,6 @@ Welcome to Rapidfire! This is a client side implementation of the rapidfire gem 
 
 The demo app is hosted on heroku [here](https://rapidfire.herokuapp.com)
 
-**Note:** This app currently uses a particular branch(other than master) from the rapidfire gem, as version 4 has not been released yet which supports rails 6.
-
 This app uses rails version 6.0 and bulma css. It is responsive & works nicely with mobiles too.
 
 #### Deployments
