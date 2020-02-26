@@ -105,7 +105,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pg (1.1.4)
-    puma (3.12.1)
+    puma (3.12.2)
     rack (2.0.8)
     rack-proxy (0.6.5)
       rack
@@ -197,7 +197,7 @@ DEPENDENCIES
   byebug
   devise
   pg
-  puma (~> 3.11)
+  puma (~> 3.12)
   rails (~> 6.0.0)
   rapidfire
   sass-rails (~> 5)
