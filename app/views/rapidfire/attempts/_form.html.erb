@@ -1,6 +1,6 @@
 <p class="text-sm p-3 bg-slate-100 rounded-md"><%= @survey.introduction -%></p>
 
-<%= form_for([@survey, @attempt_builder], html: { class: "space-y-3" }) do |f| %>
+<%= form_for([@survey, @attempt_builder], html: { class: "space-y-3" }, data: { turbo: false } ) do |f| %>
   <%- @attempt_builder.answers.each do |answer| %>
     <%= f.fields_for("#{answer.question.id}", answer) do |answer_form| %>
       <%= render_answer_form_helper(answer, answer_form) %>

@@ -20,3 +20,5 @@ gem "bootsnap", require: false
 gem "rapidfire", github: "code-mancers/rapidfire"
 gem "devise"
 gem "kaminari"
+
+gem "dockerfile-rails", ">= 1.2", :group => :development
