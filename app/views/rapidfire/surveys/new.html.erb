@@ -1,16 +1,9 @@
-<div class="container is-fluid full-height">
-  <div class="title is-4 notification level">
-    <div class="level-left">
-      <p class="level-item">
-      <%= @survey.new_record? ? "Add a Survey" : "Edit Survey" %>
-      </p>
-    </div>
-    <div class="level-right">
-      <div class="level-item">
-        <a class="button" href="/rapidfire">Back to Surveys</a>
-      </div>
-    </div>
-  </div>
+<div class="flex justify-between items-center">
+  <h1 class="font-bold">Add a survey</h1>
 
-  <%= render partial: 'form', locals: {survey: @survey} %>
+  <%= link_to "Back to surveys", surveys_path %>
 </div>
+
+<hr class="my-3" />
+
+<%= render partial: 'form', locals: { survey: @survey } %>

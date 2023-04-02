@@ -1,23 +1,16 @@
-<div class="card">
-  <header class="card-header">
-    <p class="card-header-title">
-      <%= survey.name %>
-    </p>
-  </header>
-  <div class="card-content">
-    <div class="content">
-      <%= survey.introduction %>
-      <br>
-      <time datetime="2016-1-1" class="has-text-grey">Created <%= time_ago_in_words(survey.created_at) + ' ago' %></time>
-    </div>
-  </div>
-  <footer class="card-footer">
+<div class="space-y-3">
+  <h4 class="font-medium"><%= survey.name %></h4>
+  <p class="text-sm">
+    <%= survey.introduction %>
+  </p>
+
+  <ul class="flex justify-between md:justify-normal md:gap-6 text-sm underline">
     <% if can_administer? %>
-    <%= link_to "Questions", survey_questions_path(survey), class: "card-footer-item" %>
-    <%= link_to "Results", [:results, survey], class: "card-footer-item" %>
-    <%= link_to "Delete", survey, method: :delete, class: "card-footer-item" %>
+      <%= link_to "Questions", survey_questions_path(survey) %>
+      <%= link_to "Results", [:results, survey] %>
+      <%= link_to "Delete", survey, method: :delete %>
     <% end %>
-    <%= link_to "Answer", new_survey_attempt_path(survey), class: "card-footer-item" %>
-  </footer>
+    <%= link_to "Attempt", new_survey_attempt_path(survey) %>
+  </ul>
 </div>
-<br>
+<hr class="my-3" />

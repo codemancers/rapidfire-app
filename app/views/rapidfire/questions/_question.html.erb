@@ -1,16 +1,14 @@
-<%# <tr id="question_<%= question.id %1>"> %>
-<%#   <td></td> %>
-<%#   <td> %>
-<%#     <ul class="horizontal-list"> %>
-<%#       <li></li> %>
-<%#       <li></li> %>
-<%#     </ul> %>
-<%#   </td> %>
-<%# </tr> %>
-<div class="card">
-  <div class="card-footer">
-    <div class="card-footer-item"><%= question.question_text %></div>
-    <div class="card-footer-item fixed-footer-item"><%= link_to "Edit", [:edit, question.survey, question] %></div>
-    <div class="card-footer-item fixed-footer-item"><%= link_to "Delete", [question.survey, question], method: :delete %></div>
-  </div>
+<div class="space-y-2">
+  <h4 class="font-medium"><%= question.question_text %></h4>
+  <p class="text-xs">
+    <%= question.type.split("::").last %> question
+  </p>
+
+  <ul class="flex justify-between md:justify-normal md:gap-6 text-sm underline">
+    <% if can_administer? %>
+      <%= link_to "Edit", [:edit, question.survey, question] %>
+      <%= link_to "Delete", [question.survey, question], method: :delete %>
+    <% end %>
+  </ul>
 </div>
+<hr class="my-3" />

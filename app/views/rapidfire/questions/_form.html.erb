@@ -1,88 +1,75 @@
-<div class="container is-fluid full-height">
-  <div class="align-content-center height-fit-content margin-top-5">
-    <%= form_for form, as: :question, url: url, method: method do |f| %>
-      <div class="tile is-ancestor">
-        <div class="tile is-parent box is-vertical">
-          <div class="tile is-child">
-            <div class="tile is-parent full-width">
-              <article class="tile is-parent is-vertical">
-                <%- unless form.errors.empty? %>
-                  <div class="message is-danger">
-                    <ul class="message-body">
-                      <%- form.errors.full_messages.each do |message| %>
-                        <li><%= message %></li>
-                      <% end %>
-                    </ul>
-                  </div>
-                <% end %>
-                <article class="tile is-child">
-                  <div class="form-group field">
-                    <%= f.label :type, class: "title is-6", style: "margin-right:1em;" %><br>
-                    <%= f.select :type, ::Rapidfire::QuestionForm::QUESTION_TYPES, {include_blank: "Select question Type"}, id: "question_type", class: "button is-notification full-width", placeholder: "Question Type" %>
-                  </div>
+<%= form_for form, as: :question, url: url, method: method, html: { class: "grid grid-cols-1 lg:grid-cols-2 gap-6" }, data: { turbo: false } do |f| %>
+  <%- if form.errors.any? %>
+    <ul class="list-disc list-inside">
+      <%- form.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
 
-                  <div class="form-group field">
-                    <%= f.label :question_text, class: "title is-6" %>
-                    <%= f.text_field :question_text, class: "input", placeholder: "Question text" %>
-                  </div>
+  <div class="space-y-3">
+    <h4 class="font-semibold underline">Details</h4>
+    <div>
+      <%= f.label :type, class: "block text-sm font-medium leading-6 text-gray-900" %>
+      <%= f.select :type, ::Rapidfire::QuestionForm::QUESTION_TYPES, {include_blank: "Select question Type"}, id: "question_type", class: "block w-full p-1 mt-2 rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6" %>
+    </div>
 
-                  <div class="form-group field">
-                    <%= f.label :position, class: "title is-6" %>
-                    <%= f.number_field :position, class: "input", placeholder: "Position" %>
-                  </div>
+    <div>
+      <%= f.label :question_text, class: "block text-sm font-medium leading-6 text-gray-900" %>
+      <%= f.text_field :question_text, class: "block w-full p-1 mt-2 rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6" %>
+    </div>
 
-                  <div class="form-group field">
-                    <%= f.label :placeholder, class: "title is-6" %>
-                    <%= f.text_field :placeholder, class: "input", placeholder: "Placeholder" %>
-                  </div>
+    <div>
+      <%= f.label :position, class: "block text-sm font-medium leading-6 text-gray-900" %>
+      <%= f.number_field :position, class: "block w-full p-1 mt-2 rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6" %>
+    </div>
 
-                  <div class="form-group field">
-                    <%= f.label :default_text, class: "title is-6" %>
-                    <%= f.text_field :default_text, class: "input", placeholder: "Default text" %>
-                  </div>
+    <div>
+      <%= f.label :placeholder, class: "block text-sm font-medium leading-6 text-gray-900" %>
+      <%= f.text_field :placeholder, class: "block w-full p-1 mt-2 rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6" %>
+    </div>
 
-                  <div class="form-group field">
-                    <%= f.label :answer_options, class: "title is-6" %>
-                    <%= f.text_area :answer_options, rows: 5, class: "textarea", placeholder: "Answer options, each line is an option." %>
-                  </div>
-                </article>
-              </article>
-              <article class="tile is-parent is-vertical">
-                <article class="tile is-child">
-                  <h4 class="title is-5">Other options</h4>
+    <div>
+      <%= f.label :default_text, class: "block text-sm font-medium leading-6 text-gray-900" %>
+      <%= f.text_field :default_text, class: "block w-full p-1 mt-2 rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6" %>
+    </div>
 
-                  <%= f.label :answer_presence, class: "checkbox title is-6" %>
-                  <%= f.check_box :answer_presence %>
-
-                  <div class="form-group field">
-                    <%= f.label :answer_minimum_length, class: "title is-6" %>
-                    <%= f.text_field :answer_minimum_length, class: "input", placeholder: "Answer minimum length" %>
-                  </div>
-
-                  <div class="form-group field">
-                    <%= f.label :answer_maximum_length, class: "title is-6" %>
-                    <%= f.text_field :answer_maximum_length, class: "input", placeholder: "Answer maximum length" %>
-                  </div>
-
-                  <div class="form-group field">
-                    <%= f.label :answer_greater_than_or_equal_to, class: "title is-6" %>
-                    <%= f.text_field :answer_greater_than_or_equal_to, class: "input", placeholder: "Answer greater than or equal to" %>
-                  </div>
-
-                  <div class="form-group field">
-                    <%= f.label :answer_less_than_or_equal_to, class: "title is-6" %>
-                    <%= f.text_field :answer_less_than_or_equal_to, class: "input", placeholder: "Answer greater than or equal to" %>
-                  </div>
-
-                  <div class="level-item actions signup-button create-button-margin">
-                    <%= f.submit submit_text, class: "button is-info" %>
-                  </div>
-                </article>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
+    <div>
+      <%= f.label :answer_options, class: "block text-sm font-medium leading-6 text-gray-900" %>
+      <%= f.text_area :answer_options, rows: 5, class: "block w-full p-1 mt-2 rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6" %>
+    </div>
   </div>
-</div>
+
+  <div class="space-y-3">
+    <h4 class="font-semibold underline">Other options</h4>
+
+    <div>
+      <%= f.label :answer_minimum_length, class: "block text-sm font-medium leading-6 text-gray-900" %>
+      <%= f.text_field :answer_minimum_length, class: "block w-full p-1 mt-2 rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6" %>
+    </div>
+
+    <div>
+      <%= f.label :answer_maximum_length, class: "block text-sm font-medium leading-6 text-gray-900" %>
+      <%= f.text_field :answer_maximum_length, class: "block w-full p-1 mt-2 rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6" %>
+    </div>
+
+    <div>
+      <%= f.label :answer_greater_than_or_equal_to, class: "block text-sm font-medium leading-6 text-gray-900" %>
+      <%= f.text_field :answer_greater_than_or_equal_to, class: "block w-full p-1 mt-2 rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6" %>
+    </div>
+
+    <div>
+      <%= f.label :answer_less_than_or_equal_to, class: "block text-sm font-medium leading-6 text-gray-900" %>
+      <%= f.text_field :answer_less_than_or_equal_to, class: "block w-full p-1 mt-2 rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6" %>
+    </div>
+
+    <div>
+      <%= f.check_box :answer_presence %>
+      <%= f.label :answer_presence, class: "ml-1 cursor-pointer inline-block text-sm font-medium leading-6 text-gray-900" %>
+    </div>
+  </div>
+
+  <div>
+    <%= f.submit submit_text, class: "cursor-pointer rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" %>
+  </div>
+<% end %>

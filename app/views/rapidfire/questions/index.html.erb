@@ -1,30 +1,12 @@
-<div class="container is-fluid full-height">
-  <div class="title is-4 notification level">
-    <div class="level-left">
-      <p class="level-item">
-      <% if @questions.count > 1 %>
-        <%= @questions.count %> Questions
-      <% else %>
-        Questions
-      <% end %>
-      </p>
-    </div>
-    <div class="level-right">
-      <p class="level-item">
-        <%= link_to t('rapidfire.questions.back'), surveys_path(@survey), class: "button" %>
-      </p>
-      <p class="level-item">
-        <%= link_to "New Question", new_survey_question_path(@survey), class: "button" %>
-      </p>
-    </div>
-  </div>
-
-  <% if @questions.count == 0 %>
-    <div class="align-content-center" style="height:25%;margin-left:0.5em;">
-        It's all empty here! Give your survey some questions to deal with!
-    </div>
-  <% else %>
-    <%= render partial: "question", collection: @questions %>
-    <hr/>
-  <% end %>
+<div class="flex justify-between items-center">
+  <h1 class="font-bold"><%= @questions.count %> Question(s)</h1>
+  <%= link_to "New Question", new_survey_question_path(@survey) %>
 </div>
+
+<hr class="my-3"/>
+
+<% if @questions.count == 0 %>
+  <div class="text-center">Please add a few questions.</div>
+<% else %>
+  <%= render partial: "question", collection: @questions %>
+<% end %>
