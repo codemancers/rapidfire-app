@@ -17,6 +17,6 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # App specific
-gem "rapidfire"
+gem "rapidfire", github: "code-mancers/rapidfire"
 gem "devise"
 gem "kaminari"

@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/code-mancers/rapidfire.git
+  revision: 649d700e442a1a9c9eb0520a7a2048c929ae706c
+  specs:
+    rapidfire (4.0.0)
+      active_model_serializers (~> 0.10.0)
+      rails (>= 3.2.13)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -171,9 +179,6 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
-    rapidfire (4.0.0)
-      active_model_serializers (~> 0.10.0)
-      rails (>= 3.2.13)
     responders (3.1.0)
       actionpack (>= 5.2)
       railties (>= 5.2)
@@ -214,7 +219,7 @@ DEPENDENCIES
   pg
   puma
   rails
-  rapidfire
+  rapidfire!
   sprockets-rails
   stimulus-rails
   turbo-rails

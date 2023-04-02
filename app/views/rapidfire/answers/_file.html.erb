@@ -1,0 +1,5 @@
+<div>
+  <%= f.label :answer_text, answer.question.question_text, class: "block text-sm font-medium leading-6 text-gray-900" %>
+  <%= f.file_field :file, class: "block w-full p-1 mt-2 rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6" %>
+  <%= render partial: "rapidfire/answers/errors", locals: {answer: answer} %>
+</div>
