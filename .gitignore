@@ -40,3 +40,6 @@ yarn-debug.log*
 # Ignore all logfiles and tempfiles.
 /config/database.yml
 /public/assets/
+
+/app/assets/builds/*
+!/app/assets/builds/.keep

@@ -1,39 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RapidfireClient</title>
+    <title>RapidfireDemo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
-    <%= stylesheet_pack_tag 'application' %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
     <%= render 'layouts/navigation'%>
-    <section class="section no-padding-section">
-      <div class="container">
-        <% if alert %>
-          <div class="message is-danger">
-            <p class="message-body">
-              <%= alert %>
-            </p>
-          </div>
-        <% end %>
-        <% if notice %>
-          <div class="message is-success">
-            <p class="message-body">
-              <%= notice %>
-            </p>
-          </div>
-        <% end %>
-        <%= yield %>
-      </div>
-    </section>
+
+    <% if alert %>
+      <%= alert %>
+    <% end %>
+    <% if notice %>
+       <%= notice %>
+    <% end %>
+
+    <%= yield %>
+
     <%= render 'layouts/footer'%>
   </body>
 </html>

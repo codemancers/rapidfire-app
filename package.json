@@ -1,14 +1,16 @@
 {
-  "name": "new_rapidfire",
-  "private": true,
-  "dependencies": {
-    "@rails/ujs": "^6.0.0-alpha",
-    "@rails/webpacker": "^4.0.7",
-    "bulma": "^0.7.5",
-    "turbolinks": "^5.2.0"
+  "name": "app",
+  "private": "true",
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify"
   },
-  "version": "0.1.0",
-  "devDependencies": {
-    "webpack-dev-server": "^3.8.0"
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.1",
+    "@hotwired/turbo-rails": "^7.3.0",
+    "autoprefixer": "^10.4.14",
+    "esbuild": "^0.17.15",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.1"
   }
 }

@@ -1,26 +1,3 @@
-<div class="content align-content-center">
-  <div style="padding:1em;">
-    <center>
-      <p class="title">Welcome to rapidfire. Try rapidfire surveys <a href='/rapidfire'>here</a>.</p>
-    </center><br>
-    <center><p class="subtitle">Or deploy it to your own instance at Heroku for free<sup>*</sup>:</p></center><br>
-    <center>
-      <a class="button is-large heroku-button" href="https://heroku.com/deploy?template=https://github.com/code-mancers/rapidfire-demo">
-        <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku">
-      </a>
-    </center><br>
-    <center>
-      <p class="subtitle">Or,</p>
-      <%# <p class="subtitle">If you are expecting more than 10000 responses, you could try any of the following:</p> %>
-    </center><br>
-    <center>
-        <div class="button is-medium is-info" style="margin-bottom:0.5em;">Deploy to Dockup</div>
-        <div class="button is-medium is-link" style="margin-left:0.5em;">Deploy to kubernetes</div>
-    </center>
-    <div class="level-right">
-      <p class="level-itemi has-text-grey">
-        <sup>*</sup>Heroku allows only 10000 rows for postgres in free tier.
-      </p>
-    </div>
-  </div>
+<div class="text-center py-20">
+  Welcome to rapidfire. Try rapidfire surveys <%= link_to "here", rapidfire_path %>
 </div>
