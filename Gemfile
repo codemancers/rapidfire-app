@@ -17,8 +17,10 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # App specific
-gem "rapidfire", github: "code-mancers/rapidfire"
+gem "rapidfire"
 gem "devise"
 gem "kaminari"
 
-gem "dockerfile-rails", ">= 1.2", :group => :development
+group :development do
+  gem "dockerfile-rails", ">= 1.2"
+end
