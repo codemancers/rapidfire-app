@@ -13,7 +13,6 @@
 ActiveRecord::Schema[7.0].define(version: 2023_04_02_174122) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "postgis"
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -84,14 +83,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_02_174122) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "after_survey_content"
-  end
-
-  create_table "spatial_ref_sys", primary_key: "srid", id: :integer, default: nil, force: :cascade do |t|
-    t.string "auth_name", limit: 256
-    t.integer "auth_srid"
-    t.string "srtext", limit: 2048
-    t.string "proj4text", limit: 2048
-    t.check_constraint "srid > 0 AND srid <= 998999", name: "spatial_ref_sys_srid_check"
   end
 
   create_table "users", force: :cascade do |t|
